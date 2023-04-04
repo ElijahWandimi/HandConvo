@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ksl_translator">KSL Translator</string>
+    <string name="start_translation">Start translation</string>
+</resources>

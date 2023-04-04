@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">SLTranslator</string>
+    <string name="ksl_translator">KSL Translator</string>
+    <string name="start_translation">Start translation</string>
+</resources>

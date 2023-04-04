@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <Space
+        android:id="@+id/spcTop"
+        android:layout_width="match_parent"
+        android:layout_height="11sp"
+        app:layout_constraintTop_toTopOf="parent"/>
+<!--        app:layout_constraintBottom_toTopOf="@+id/previewContainer"/>-->
+
+   <com.google.android.material.card.MaterialCardView
+       android:id="@+id/previewContainer"
+       android:layout_width="0dp"
+       android:layout_height="0dp"
+       app:cardCornerRadius="9sp"
+       app:layout_constraintTop_toBottomOf="@+id/spcTop"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintBottom_toTopOf="@+id/tnsArea">
+
+       <androidx.camera.view.PreviewView
+           android:id="@+id/prViewCam"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"/>
+
+   </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:id="@+id/tnsArea"
+        android:layout_width="match_parent"
+        android:layout_height="180sp"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/previewContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnStart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cornerRadius="13sp"
+            android:layout_marginLeft="26sp"
+            android:layout_marginRight="26sp"
+            android:text="@string/start_translation"/>
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtResult"
+            android:layout_width="match_parent"
+            android:layout_height="120sp"
+            android:elevation="12sp"
+            android:layout_marginLeft="20sp"
+            android:backgroundTint="@color/cardview_dark_background"
+            android:layout_marginRight="20sp"
+            android:layout_marginBottom="10sp"/>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
